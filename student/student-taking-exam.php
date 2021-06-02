@@ -597,5 +597,18 @@
     <script src="../js/sidebar.js"></script>
     <script src="../js/timer.js"></script>
     <script src="../js/stickyElementOnScroll.js"></script>
+    <script type="text/javascript">
+    function logoutFunction()
+    {
+      <?php
+          if(isset($_POST["logout"]))
+          {
+            session_unset();
+            session_destroy();
+            redirect("login.php");
+          }
+      ?>
+    }
+    </script>
   </body>
 </html>
