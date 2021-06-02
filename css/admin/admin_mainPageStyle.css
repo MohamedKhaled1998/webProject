@@ -1,0 +1,75 @@
+/* 🟢 start Grid */
+.item-a{ grid-area: sideElement; }
+
+.item-b{grid-area: mainElement;}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 16% 1fr;
+  height: 100vh;
+  grid-template-areas: "sideElement mainElement";
+}
+
+.innerGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+/* 🔴 end Grid */
+
+.sideNav {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.userSelectNone{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.nav-link:hover:not(.fa-users):not(.active) {
+  background-color: #0d6efd94;
+  border-color: #0d6efd94;
+}
+
+.div {
+	width: 6rem;
+	margin: 1rem auto;
+}
+
+.Users{
+  padding: 3%;
+  margin: 0 auto;
+}
+.Users > h5 {
+  margin-bottom: 5vh !important;
+}
+
+.card{
+  width: 18rem;
+}
+
+.card:hover{
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  border: none;
+}
+
+.mainPadding{padding: 5% 3%;}
+
+ .hmmm > h5{
+  margin: 5vh auto;
+}
+
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+
+  }
+
+
+  

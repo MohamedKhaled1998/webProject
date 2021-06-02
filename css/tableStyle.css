@@ -1,0 +1,111 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
+#table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 1.5em !important;
+	margin: .5em 0 .75em !important;
+	padding-top: .5rem !important;
+	padding-bottom: .5rem !important;
+	color: #6c757d !important;
+	text-align: left !important;
+}
+
+#table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+#table th,
+#table td {
+  padding: .625em;
+  text-align: center;
+}
+
+#table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background-color: #e5e5e5;
+}
+
+tbody > tr > td:nth-child(2){
+  background-color: #f2f2f2;
+}
+
+tbody > tr > td:nth-child(1) {
+	text-align: left !important;
+}
+
+td > a {
+  text-decoration: none;
+}
+
+.buttons {
+	margin-bottom: 6vh;
+	margin-top: 3vh;
+}
+
+/* ========================================================================================= */
+
+
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+     
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+    
+    #table {
+    border: 0;
+  }
+ 
+  
+  #table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  #table tr {
+    border-bottom: 3px solid #ddd;
+    margin-bottom: 2vh;
+  }
+  
+  #table td {
+		border-bottom: 1px solid #eee; 
+		position: relative;
+    text-align: right !important;
+  }
+  
+	#table td:before { 
+		position: absolute;
+    top: 6px;
+		left: 6px;
+    text-align: left;
+	}
+    
+    #table td:last-child {
+    border-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.3em !important;
+  }
+}

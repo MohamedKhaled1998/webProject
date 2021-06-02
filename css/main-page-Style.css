@@ -1,0 +1,151 @@
+/* 🟢 start Grid System */
+
+  /* 🟢🟢 start Card-Grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 16vw);
+    grid-gap: 25px;
+    justify-content: center;
+    /* margin-right: 2vw; */
+  }
+
+  .cards-grid > div {
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  /* 🔴🔴 end Card-Grid */
+
+  /* 🟢🟢 start insideCard-grid */
+  .insideCard-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:  15vh;
+  }
+  /* 🔴🔴 end insideCard-grid */
+
+/* 🔴 end Grid System */
+
+/* =================================================== */
+
+/* 🟢 start General */
+
+/* 🔴 end General */
+
+/* =================================================== */
+
+/* 🟢 start Navbar */
+
+/* 🔴 end Navbar */
+
+/* =================================================== */
+
+/* 🟢 start Main */
+h4.text-muted{
+  margin-bottom: 5.6vh;
+}
+
+#Courses{
+  padding-bottom: 2.5vh;
+}
+
+.card-header {
+	background-color: inherit !important;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0px;
+  text-align: center;
+  color: #6c757d;
+  background-color: #f1f1f1;
+  display: inline-block;
+}
+
+h5{
+  color: black;
+}
+
+.docName {
+	margin-bottom: 0rem;
+}
+
+.card-footer {
+	background-color: inherit !important;
+}
+
+.resultLink {
+	margin-right: 5vh;
+}
+
+.card-body:hover,
+.card-body:active,
+.card-body:hover h5 {
+  color: #fff !important;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.text-decoration-line-through {
+  cursor: not-allowed;
+  opacity: 0.5;
+  color: currentColor;
+  pointer-events: none;
+}
+
+.FAKE-card-footer {
+  padding: .5rem 1rem;
+  background-color: rgba(0,0,0,.03);
+background-color: inherit !important;
+border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+}
+/* 🔴 end Main */
+
+/* =================================================== */
+
+/* 🟢 start footer */
+
+/* 🔴 end footer */
+
+/* =================================================== */
+
+/* 🟢 end @media */
+
+/* iPhone 6+, 7+ and 8+ */
+/* BOth Portrait & Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    /* To-Do: remove/modfiy insideCard-grid */
+    .insideCard-grid {
+      grid-template-columns: auto !important;
+    }
+
+    .cards-grid {
+      grid-template-columns: 78vw;
+      grid-template-rows: auto;
+    }
+
+    .resultLink {
+      margin-right: 10vh;
+    }
+
+  }
+
+  /* Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+  .insideCard-grid { grid-template-rows: 20vh !important;}
+
+  .cards-grid {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 8vw;
+    grid-row-gap: 8vh;
+  }
+
+}
+/* 🔴 end @media */

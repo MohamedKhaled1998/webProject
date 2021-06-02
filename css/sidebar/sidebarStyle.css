@@ -1,0 +1,142 @@
+/* 🟢 start Grid */
+.item-d{grid-area: sidebar;}
+
+.grid-container{
+  grid-template-areas: 
+    "header header header header"
+    ". sidebar main ."
+    "footer footer footer footer";
+  grid-template-columns: 20% 6% 1fr 15%;
+}
+/* 🔴 end Grid */
+
+
+/* 🟢 start Sidebar */
+#stickyBar {
+  position: sticky;
+  top: 0rem;
+  margin-top: 17.5vh;
+}
+/* 🔴 end Sidebar */
+
+/* 🟢 start Exam Header */
+.examHeader {
+  color: white;
+  background-color: #14213d;
+}
+/* 🔴 end Exam Header */
+
+
+#btn_line {
+	border-top: 2px solid #6c757d54;
+	margin: auto 20vw;
+}
+
+button{
+  margin-top: 4vh !important;
+}
+
+form > div{
+  margin: 4vh auto;
+}
+
+
+/* 🟢 start timer style */
+#timer {
+  display: block ruby;
+}
+
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  color: white;
+}
+/* 🔴 end timer style */
+
+
+.mainPadding {
+	height: 100%;
+}
+
+.shadow {
+	padding-right: 0%;
+	padding-left: 0%;
+	padding-top: 0%;
+}
+
+.examHeaderPaddingTopBot{
+  padding-top: 5%;
+  padding-bottom: 2%;
+  border-radius: .25rem .25rem 0 0;
+}
+
+.timerPaddingTopBot{
+  padding: 0.3% 0%;
+}
+
+.stickyTimer.sticky {
+  border-radius: 0 0 .25rem .25rem;
+}
+
+/* 🟢 start @media */
+/*BOTH */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .container, .container-sm { 
+      max-width: inherit !important;
+     }
+
+     .grid-container{
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: 0.1fr 1fr;
+      height: 100vh;
+      grid-template-areas: 
+                          "header header header"
+                          "main main main"
+                          "footer footer footer";
+
+    }
+
+    #stickyBar {
+      display: none;
+    }
+
+    .examHeaderPaddingTopBot {
+      border-radius: 0 0 0 0;
+    }
+
+    footer{
+      text-align: center;
+    }
+
+    .line{
+      border-bottom: 2px solid #a2a2a2;
+    }
+
+    h5{
+      font-size: 1rem !important;
+    }  
+
+  }
+
+  /* Landscape */
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) {
+}
+/* 🔴 end @media */

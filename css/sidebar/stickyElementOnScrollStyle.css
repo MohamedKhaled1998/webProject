@@ -1,0 +1,10 @@
+.stickyTimer {
+    width: 100%;
+    z-index: 99;
+    position: static;
+}
+  
+.stickyTimer.sticky {
+    position: sticky;
+    top: 0;
+}

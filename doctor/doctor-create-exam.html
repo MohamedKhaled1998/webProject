@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0,width=device-width" />
+    <link rel="stylesheet" href="../css/mainStyle.css" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <title>Create Exam</title>
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- 🟢 start nav-->
+      <div class="item-a bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <a class="navbar-brand" href="home.html"
+              ><img
+                src="../images/logo_navbar.png"
+                width="30"
+                height="30"
+                class="d-inline-block align-top"
+              />
+              AAST Exam System
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navbarNav" class="collapse navbar-collapse text-center">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link fas fa-university" href="home.html">
+                    Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link fas fa-pen-square active"
+                    href="exams.html"
+                  >
+                    Exams</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link fas fa-question-circle"
+                    href="questions_bank.html"
+                  >
+                    Questions Bank</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fas fa-poll" href="results.html">
+                    Results</a
+                  >
+                </li>
+                <li class="nav-item nav-link">
+                  <div class="line"></div>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link fas fa-sign-out-alt"
+                    href="../login.php"
+                    onClick="logoutFunction()"
+                  >
+                    Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- 🔴 end nav-->
+
+      <!-- 🟢 start main-->
+      <main class="item-b">
+        <div class="container">
+          <div class="shadow mainPadding">
+            <!--start Create Exam-->
+            <form>
+              <div id="createExam">
+                <div class="mb-4">
+                  <label class="form-label" for="examTitle">Exam title:</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="examTitle"
+                    placeholder="ex: 7th exam"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="examDescription"
+                    >Description:</label
+                  >
+                  <textarea
+                    class="form-control"
+                    name="examDescription"
+                    rows="3"
+                    cols="40"
+                    placeholder="ex: something very important. ¯\_(ツ)_/¯ "
+                  ></textarea>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="examMarks">Marks:</label>
+                  <input
+                    id="examMarks"
+                    class="form-control"
+                    type="number"
+                    min="1"
+                    name="examMarks"
+                    placeholder="ex: out of 20."
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="numberOfQuestions"
+                    >number Of Questions:</label
+                  >
+                  <input
+                    id="numOfQs"
+                    class="form-control"
+                    type="number"
+                    name="numberOfQuestions"
+                    placeholder="ex: 10 (10 = 10 questions)."
+                  />
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="mb-4">
+                      <label class="form-label" for="startDateAndTime"
+                        >Start date & time:</label
+                      >
+                      <input
+                        class="form-control"
+                        type="datetime-local"
+                        name="startDateAndTime"
+                        value="2021-04-24T05:53"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="mb-4">
+                      <label class="form-label" for="endDateAndTime"
+                        >End date & time:</label
+                      >
+                      <input
+                        class="form-control"
+                        type="datetime-local"
+                        name="endDateAndTime"
+                        value="2021-04-24T05:53"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="examDuration"
+                    >Duration (mins):</label
+                  >
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="examDuration"
+                    placeholder="ex: 120 (120mins = 2hrs)."
+                  />
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto pt-4">
+                  <button class="btn btn-primary" type="submit" disabled>
+                    Finish (WIP)
+                  </button>
+                  <p class="text-muted text-center lineBetween">─ OR ─</p>
+                  <button
+                    class="btn btn-primary"
+                    onclick="nextPage()"
+                    type="submit"
+                  >
+                    Add Questions to Exam
+                  </button>
+                </div>
+              </div>
+            </form>
+            <!--end Create Exam-->
+          </div>
+        </div>
+      </main>
+      <!-- 🔴 end main-->
+
+      <!-- 🟢 start footer-->
+      <footer class="item-c bg-dark p-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="../images/logo_footer.png" />
+              <p class="text-light">
+                AASTMT is now providing many educational tracks in terms of high
+                quality and diversity of service in order to harmonize with the
+                dynamic development.
+              </p>
+            </div>
+            <div class="col-lg-3 col">
+              <h5 class="text-uppercase text-light">FOLLOW US</h5>
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="https://www.facebook.com/pages/AAST/1463704063876547"
+                    >Facebook</a
+                  >
+                </li>
+                <li><a href="https://twitter.com/AASTMTeg">Twitter</a></li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/arab_academy_official/?hl=en"
+                    >Instagram</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/user/aastvideo/videos"
+                    >YouTube</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/school/arab-academy-for-science-and-technology-and-maritime-transport/"
+                    >Linkedin</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col">
+              <h5 class="text-uppercase text-light">QUICK LINKS</h5>
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="https://staffportal.aast.edu/">Staff Portal</a>
+                </li>
+                <li>
+                  <a href="https://studentportal.aast.edu/">Student Portal</a>
+                </li>
+                <li>
+                  <a
+                    href="https://aastmtic2.aast.edu/certifications/certification.aspx"
+                    >Certificates Verification</a
+                  >
+                </li>
+                <li>
+                  <a href="http://www.aast.edu/en/contacts/contact-us.php"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- 🔴 end footer-->
+    </div>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
