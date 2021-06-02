@@ -229,15 +229,19 @@ while($result = $row->fetch_assoc())
         <!-- 🔴 end footer-->
       </div>
       <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script type="text/javascript">
-            function logoutFunction(){
-                <?php
-                session_unset();
-                // destroy the session
-                session_destroy();
-                ?>
+      <script type="text/javascript">
+      function logoutFunction()
+      {
+        <?php
+            if(isset($_POST["logout"]))
+            {
+              session_unset();
+              session_destroy();
+              redirect("login.php");
             }
-        </script>
+        ?>
+      }
+      </script>
     </body>
   </html>
   

@@ -211,5 +211,18 @@ else
       
     </div>
     <script src="../js/main/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+    function logoutFunction()
+    {
+      <?php
+          if(isset($_POST["logout"]))
+          {
+            session_unset();
+            session_destroy();
+            redirect("login.php");
+          }
+      ?>
+    }
+    </script>
   </body>
 </html>
